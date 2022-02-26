@@ -3,11 +3,21 @@
     "description": "can ppl just use bcc lmao",
     "version": "0.1",
     "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background":{
+        "service_worker": "service_worker.js"
+    },
     "content_scripts":[
         {
             "matches": ["*://mail.google.com/*"],
             "js": ["gmail.js"],
             "run_at": "document_idle"
         }
+    ],
+    "permissions": [
+        "tabs"
     ]
+    
 }

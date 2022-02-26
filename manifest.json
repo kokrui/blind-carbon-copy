@@ -1,0 +1,13 @@
+{
+    "name": "blind carbon copy",
+    "description": "can ppl just use bcc lmao",
+    "version": "0.1",
+    "manifest_version": 3,
+    "content_scripts":[
+        {
+            "matches": ["*://mail.google.com/*"],
+            "js": ["gmail.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
